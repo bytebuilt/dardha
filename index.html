@@ -1,0 +1,1827 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  
+  <!-- SEO & Meta -->
+  <title>Vegla Punë Dardha | Vegla Pune & Materiale Ndërtimi Tiranë</title>
+  <meta name="description" content="Vegla punë profesionale, hidraulike, elektrike dhe aksesorë shtëpiak në Tiranë. Çmime të dukshme, marka të njohura, hapur deri në 23:30. Rr. Siri Kodra, Bulevardi i Ri.">
+  <meta property="og:title" content="Vegla Punë Dardha | Vegla Pune & Materiale Ndërtimi Tiranë">
+  <meta property="og:description" content="Vegla punë profesionale, hidraulike, elektrike dhe aksesorë shtëpiak. Hapur deri në 23:30.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vegla-pune-dardha.al">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1581147036324-c1c89c2c2c95?w=1200&h=630&fit=crop">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HardwareStore",
+    "name": "Vegla Punë Dardha",
+    "image": "https://images.unsplash.com/photo-1581147036324-c1c89c2c2c95?w=1200&h=630&fit=crop",
+    "telephone": "+355688353311",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rr. Siri Kodra, Bulevardi i Ri",
+      "addressLocality": "Tiranë",
+      "addressCountry": "AL"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "08:00",
+      "closes": "23:30"
+    },
+    "priceRange": "$$",
+    "url": "https://vegla-pune-dardha.al"
+  }
+  </script>
+
+  <style>
+    /* ---------- CSS Variables ---------- */
+    :root {
+      --red: #D3281C;
+      --red-dark: #A81E14;
+      --black: #1A1A1A;
+      --charcoal: #2A2A2A;
+      --grey-light: #F4F4F4;
+      --grey-bg: #E8E8E8;
+      --grey-border: #D0D0D0;
+      --text: #1A1A1A;
+      --text-muted: #666;
+      --white: #FFFFFF;
+      --radius: 8px;
+      --shadow: 0 4px 16px rgba(0,0,0,0.08);
+      --font-head: 'Barlow Condensed', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --black: #121212;
+        --charcoal: #1E1E1E;
+        --grey-light: #1A1A1A;
+        --grey-bg: #242424;
+        --grey-border: #3A3A3A;
+        --text: #F0F0F0;
+        --text-muted: #AAA;
+        --white: #1E1E1E;
+        --shadow: 0 4px 16px rgba(0,0,0,0.4);
+      }
+    }
+
+    /* ---------- Reset & Base ---------- */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; animation: none !important; }
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--grey-bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      cursor: pointer;
+      font-family: inherit;
+      border: none;
+      background: none;
+    }
+
+    /* ---------- Utilities ---------- */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 12px;
+    }
+
+    @media (min-width: 480px) {
+      .container { padding: 0 16px; }
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--red);
+      outline-offset: 2px;
+    }
+
+    /* =========================================
+       ANIMACIONET
+       ========================================= */
+    
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes pulseRed {
+      0% { box-shadow: 0 0 0 0 rgba(211,40,28,0.7); }
+      70% { box-shadow: 0 0 0 15px rgba(211,40,28,0); }
+      100% { box-shadow: 0 0 0 0 rgba(211,40,28,0); }
+    }
+
+    @keyframes pulseGreen {
+      0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.7); }
+      70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); }
+      100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    @keyframes floatIcon {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-6px) rotate(3deg); }
+    }
+
+    @keyframes lineGrow {
+      from { width: 0; }
+      to { width: 48px; }
+    }
+
+    @keyframes glow {
+      0%, 100% { text-shadow: 0 0 5px rgba(211,40,28,0); }
+      50% { text-shadow: 0 0 10px rgba(211,40,28,0.5); }
+    }
+
+    /* Animacione për Hero Industrial */
+    @keyframes rotateGear {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes rotateScrew {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    @keyframes sparkFly {
+      0% { opacity: 0; transform: translate(0, 0) scale(0); }
+      20% { opacity: 1; transform: translate(0, 0) scale(1.5); }
+      100% { opacity: 0; transform: translate(30px, -80px) scale(0); }
+    }
+
+    @keyframes scanLine {
+      0% { top: -10%; opacity: 0; }
+      50% { opacity: 1; }
+      100% { top: 110%; opacity: 0; }
+    }
+
+    /* Klasat */
+    .animate-fade-up {
+      animation: fadeInUp 0.8s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+      opacity: 0;
+    }
+
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+    .delay-4 { animation-delay: 0.4s; }
+
+    .pulse-btn-red { animation: pulseRed 2s infinite; }
+    .pulse-btn-green { animation: pulseGreen 2s infinite; }
+
+    .typewriter {
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 3px solid var(--red);
+      animation: typing 2s steps(30, end), blink 0.75s step-end infinite;
+    }
+
+    .category-card:hover .category-icon {
+      animation: floatIcon 1.5s ease-in-out infinite;
+    }
+
+    .section-header h2::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 4px;
+      background: var(--red);
+      margin-top: 8px;
+      border-radius: 2px;
+      animation: lineGrow 0.8s ease forwards;
+    }
+
+    .product-card:hover .product-price {
+      animation: glow 1.5s ease-in-out infinite;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .animate-fade-up { animation: none; opacity: 1; }
+      .price-tag { animation: none !important; }
+      .typewriter { animation: none; border-right: none; width: 100%; }
+      .pulse-btn-red, .pulse-btn-green { animation: none; }
+      .category-card:hover .category-icon { animation: none; }
+      .section-header h2::after { animation: none; width: 48px; }
+      .product-card:hover .product-price { animation: none; }
+      .gear, .hero-screw, .spark, .scan-line { animation: none !important; }
+    }
+
+    /* ---------- Buttons ---------- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 12px 20px;
+      border-radius: var(--radius);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+      text-align: center;
+      -webkit-tap-highlight-color: transparent;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn:active {
+      transform: scale(0.96);
+    }
+
+    .btn-primary {
+      background: var(--red);
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(211,40,28,0.3);
+    }
+
+    .btn-primary:hover {
+      background: var(--red-dark);
+      box-shadow: 0 6px 16px rgba(211,40,28,0.4);
+    }
+
+    .btn-wa {
+      background: #25D366;
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(37,211,102,0.3);
+    }
+
+    .btn-wa:hover {
+      background: #1DA851;
+      box-shadow: 0 6px 16px rgba(37,211,102,0.4);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--text);
+      color: var(--text);
+    }
+
+    .btn-outline:hover {
+      background: var(--text);
+      color: var(--white);
+    }
+
+    .btn-sm {
+      min-height: 44px;
+      padding: 8px 16px;
+      font-size: 0.85rem;
+    }
+
+    /* ---------- Header ---------- */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 3px solid var(--red);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      gap: 8px;
+    }
+
+    @media (min-width: 768px) {
+      .header-inner { height: 64px; gap: 16px; }
+    }
+
+    .logo {
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 1.1rem;
+      line-height: 1.1;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      min-height: 44px;
+    }
+
+    @media (min-width: 480px) {
+      .logo { font-size: 1.3rem; }
+    }
+
+    .logo-img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+
+    @media (min-width: 480px) {
+      .logo-img { width: 36px; height: 36px; }
+    }
+
+    .logo span {
+      color: var(--red);
+    }
+
+    .nav {
+      display: none;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .nav a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: color var(--transition);
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--red);
+      transition: width var(--transition);
+    }
+
+    .nav a:hover {
+      color: var(--red);
+    }
+
+    .nav a:hover::after {
+      width: 100%;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .header-phone {
+      display: none;
+    }
+
+    /* ---------- Mobile Nav Toggle ---------- */
+    .menu-toggle {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: 10px;
+      min-height: 44px;
+      min-width: 44px;
+      align-items: center;
+      justify-content: center;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    .menu-toggle.open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* =========================================
+       HERO INDUSTRIAL (Efekti vizual)
+       ========================================= */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 50%, #0A0A0A 100%);
+      color: #fff;
+      padding: 60px 0 70px;
+      min-height: 560px;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Rrotat e dhëmbëzuara në sfond */
+    .gear-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.08;
+      overflow: hidden;
+    }
+
+    .gear {
+      position: absolute;
+      color: var(--red);
+      animation: rotateGear 25s linear infinite;
+      user-select: none;
+      line-height: 1;
+    }
+
+    .gear-1 { top: 5%; left: 3%; font-size: 180px; animation-duration: 28s; animation-direction: reverse; }
+    .gear-2 { bottom: 8%; right: 3%; font-size: 240px; animation-duration: 38s; }
+    .gear-3 { top: 42%; left: 42%; font-size: 120px; animation-duration: 20s; animation-direction: reverse; }
+
+    /* Vidha qendrore */
+    .hero-screw {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 200px;
+      color: rgba(211, 40, 28, 0.06);
+      animation: rotateScrew 18s linear infinite;
+      pointer-events: none;
+      z-index: 0;
+      user-select: none;
+      line-height: 1;
+    }
+
+    /* Shkëndijat */
+    .sparks {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .spark {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background: #FFD700;
+      border-radius: 50%;
+      box-shadow: 0 0 8px 3px #FFD700, 0 0 16px 5px #FF6600;
+      opacity: 0;
+      animation: sparkFly 3.5s ease-out infinite;
+    }
+
+    .spark:nth-child(1) { top: 25%; left: 15%; animation-delay: 0s; }
+    .spark:nth-child(2) { top: 65%; left: 75%; animation-delay: 0.7s; }
+    .spark:nth-child(3) { top: 15%; left: 85%; animation-delay: 1.4s; }
+    .spark:nth-child(4) { top: 80%; left: 25%; animation-delay: 2.1s; }
+    .spark:nth-child(5) { top: 45%; left: 50%; animation-delay: 0.9s; }
+    .spark:nth-child(6) { top: 12%; left: 45%; animation-delay: 2.8s; }
+    .spark:nth-child(7) { top: 70%; left: 60%; animation-delay: 1.7s; }
+
+    /* Vija diagonale */
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 30px,
+        rgba(211, 40, 28, 0.04) 30px,
+        rgba(211, 40, 28, 0.04) 31px
+      );
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Vija skanimi */
+    .scan-line {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--red), transparent);
+      box-shadow: 0 0 20px 4px rgba(211,40,28,0.6);
+      z-index: 2;
+      animation: scanLine 6s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      position: relative;
+      z-index: 3;
+      width: 100%;
+    }
+
+    .hero-content {
+      max-width: 600px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: 2.2rem;
+      font-weight: 800;
+      line-height: 1.05;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+      min-height: 1.1em;
+      color: #fff;
+    }
+
+    @media (min-width: 480px) {
+      .hero h1 { font-size: 2.8rem; }
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--red);
+    }
+
+    .hero p {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 24px;
+      max-width: 480px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-buttons .btn {
+      flex: 1 1 auto;
+      min-width: 140px;
+    }
+
+    .hero-visual {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .price-tag {
+      background: var(--white);
+      color: var(--text);
+      border-radius: var(--radius);
+      padding: 14px 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      min-width: 150px;
+      border-left: 4px solid var(--red);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .price-tag:nth-child(2) { animation-delay: 1s; }
+    .price-tag:nth-child(3) { animation-delay: 2s; }
+
+    .price-tag .tag-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .price-tag .tag-name {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1.1rem;
+      line-height: 1.2;
+    }
+
+    .price-tag .tag-price {
+      font-weight: 700;
+      color: var(--red);
+      font-size: 1.15rem;
+      margin-top: 2px;
+    }
+
+    /* ---------- Section ---------- */
+    .section {
+      padding: 48px 0;
+    }
+
+    @media (min-width: 768px) {
+      .section { padding: 56px 0; }
+    }
+
+    .section-header {
+      margin-bottom: 24px;
+    }
+
+    .section-header h2 {
+      font-family: var(--font-head);
+      font-size: 1.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: -0.3px;
+      line-height: 1.1;
+    }
+
+    @media (min-width: 480px) {
+      .section-header h2 { font-size: 2rem; }
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      margin-top: 8px;
+      max-width: 560px;
+      font-size: 0.95rem;
+    }
+
+    /* ---------- Categories ---------- */
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    @media (min-width: 480px) {
+      .categories-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    }
+
+    @media (min-width: 1024px) {
+      .categories-grid { grid-template-columns: repeat(6, 1fr); }
+    }
+
+    .category-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 16px 12px;
+      border: 1px solid var(--grey-border);
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+      min-height: 100px;
+      text-align: left;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .category-card:active {
+      transform: scale(0.97);
+    }
+
+    .category-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+      border-color: var(--red);
+    }
+
+    .category-icon {
+      font-size: 1.5rem;
+      line-height: 1;
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    .category-card h3 {
+      font-family: var(--font-head);
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 1.15;
+    }
+
+    @media (min-width: 480px) {
+      .category-card h3 { font-size: 1.05rem; }
+    }
+
+    .category-card p {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* ---------- Catalog Controls ---------- */
+    .catalog-controls {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .search-wrapper {
+      position: relative;
+      width: 100%;
+    }
+
+    .search-wrapper input {
+      width: 100%;
+      min-height: 48px;
+      padding: 12px 16px 12px 44px;
+      border-radius: var(--radius);
+      border: 2px solid var(--grey-border);
+      background: var(--white);
+      color: var(--text);
+      font-size: 16px;
+      font-family: inherit;
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+
+    .search-wrapper input:focus {
+      border-color: var(--red);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(211,40,28,0.1);
+    }
+
+    .search-wrapper::before {
+      content: '🔍';
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1rem;
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    .filter-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .filter-btn {
+      padding: 8px 14px;
+      min-height: 40px;
+      border-radius: 40px;
+      border: 2px solid var(--grey-border);
+      background: var(--white);
+      color: var(--text);
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: all var(--transition);
+      white-space: nowrap;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .filter-btn:active {
+      transform: scale(0.95);
+    }
+
+    .filter-btn:hover {
+      border-color: var(--red);
+      color: var(--red);
+    }
+
+    .filter-btn.active {
+      background: var(--red);
+      border-color: var(--red);
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(211,40,28,0.3);
+    }
+
+    /* ---------- Product Grid ---------- */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    @media (min-width: 480px) {
+      .product-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    }
+
+    @media (min-width: 640px) {
+      .product-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (min-width: 1024px) {
+      .product-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    .product-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--grey-border);
+      transition: transform var(--transition), box-shadow var(--transition);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      animation: fadeInUp 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+      opacity: 0;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+    }
+
+    .product-image {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      background: var(--grey-bg);
+      overflow: hidden;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+      background: var(--grey-bg);
+    }
+
+    .product-card:hover .product-image img {
+      transform: scale(1.08);
+    }
+
+    .badge-oferte {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      background: var(--red);
+      color: #fff;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      z-index: 2;
+      box-shadow: 0 2px 8px rgba(211,40,28,0.4);
+    }
+
+    @media (min-width: 480px) {
+      .badge-oferte { font-size: 0.65rem; padding: 4px 10px; }
+    }
+
+    .product-info {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      flex: 1;
+    }
+
+    @media (min-width: 480px) {
+      .product-info { padding: 12px; }
+    }
+
+    .product-brand {
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      font-weight: 700;
+      color: var(--red);
+    }
+
+    @media (min-width: 480px) {
+      .product-brand { font-size: 0.65rem; }
+    }
+
+    .product-name {
+      font-size: 0.8rem;
+      font-weight: 600;
+      line-height: 1.3;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      min-height: 2.1em;
+    }
+
+    @media (min-width: 480px) {
+      .product-name { font-size: 0.85rem; }
+    }
+
+    .product-price {
+      font-family: var(--font-head);
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-top: 2px;
+      transition: color var(--transition);
+    }
+
+    @media (min-width: 480px) {
+      .product-price { font-size: 1.15rem; }
+    }
+
+    .product-price .ask {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      font-family: var(--font-body);
+    }
+
+    .product-actions {
+      padding: 0 10px 10px;
+      margin-top: auto;
+    }
+
+    @media (min-width: 480px) {
+      .product-actions { padding: 0 12px 12px; }
+    }
+
+    .product-actions .btn {
+      width: 100%;
+      min-height: 40px;
+      font-size: 0.8rem;
+      padding: 8px 12px;
+    }
+
+    .no-results {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 48px 16px;
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    /* ---------- Pse ne ---------- */
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    @media (min-width: 640px) {
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 1024px) {
+      .why-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    .why-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 20px 16px;
+      border-left: 4px solid var(--red);
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .why-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .why-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--grey-bg);
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .why-card:hover .why-icon {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .why-card h3 {
+      font-family: var(--font-head);
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .why-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* ---------- Contact ---------- */
+    .contact-section {
+      background: var(--black);
+      color: #fff;
+      padding: 48px 0;
+    }
+
+    .contact-section .section-header h2 {
+      color: #fff;
+    }
+
+    .contact-section .section-header p {
+      color: rgba(255,255,255,0.7);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    @media (min-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .contact-card {
+      background: var(--charcoal);
+      border-radius: var(--radius);
+      padding: 20px 16px;
+      transition: transform var(--transition);
+    }
+
+    .contact-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .contact-card h3 {
+      font-family: var(--font-head);
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      color: var(--red);
+    }
+
+    .contact-card p,
+    .contact-card a {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.7;
+    }
+
+    .contact-card a:hover {
+      color: #fff;
+    }
+
+    .contact-phone-big {
+      font-family: var(--font-head);
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff !important;
+      display: inline-block;
+      margin: 8px 0;
+      letter-spacing: 0.5px;
+      transition: color var(--transition), transform var(--transition);
+    }
+
+    .contact-phone-big:hover {
+      color: var(--red) !important;
+      transform: scale(1.02);
+    }
+
+    .contact-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .contact-buttons .btn {
+      flex: 1 1 auto;
+      min-width: 120px;
+    }
+
+    .hours-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(211,40,28,0.15);
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 1px solid rgba(211,40,28,0.4);
+      animation: pulseRed 2s infinite;
+    }
+
+    /* ---------- Footer ---------- */
+    .footer {
+      background: #0A0A0A;
+      color: rgba(255,255,255,0.5);
+      padding: 24px 0;
+      text-align: center;
+      font-size: 0.8rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .footer strong {
+      color: rgba(255,255,255,0.8);
+    }
+
+    /* ---------- Mobile Nav Overlay ---------- */
+    .nav-mobile {
+      display: none;
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: var(--white);
+      border-bottom: 3px solid var(--red);
+      padding: 16px;
+      z-index: 99;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      animation: fadeInUp 0.3s ease;
+    }
+
+    .nav-mobile.open {
+      display: block;
+    }
+
+    .nav-mobile a {
+      display: flex;
+      align-items: center;
+      min-height: 48px;
+      padding: 8px 12px;
+      font-size: 1rem;
+      font-weight: 500;
+      border-bottom: 1px solid var(--grey-border);
+      transition: color var(--transition), background var(--transition), padding-left var(--transition);
+    }
+
+    .nav-mobile a:last-child {
+      border-bottom: none;
+    }
+
+    .nav-mobile a:hover {
+      color: var(--red);
+      background: var(--grey-bg);
+      border-radius: 6px;
+      padding-left: 20px;
+    }
+
+    /* ---------- Floating WhatsApp Button (Mobile) ---------- */
+    .floating-wa {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      box-shadow: 0 6px 20px rgba(37,211,102,0.5);
+      z-index: 98;
+      animation: pulseGreen 2s infinite;
+      transition: transform var(--transition);
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .floating-wa:hover {
+      transform: scale(1.1);
+    }
+
+    @media (min-width: 768px) {
+      .floating-wa {
+        display: none;
+      }
+    }
+
+    /* ---------- Desktop Overrides ---------- */
+    @media (min-width: 768px) {
+      .header-phone {
+        display: inline-flex;
+      }
+
+      .nav {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: none;
+      }
+
+      .nav-mobile {
+        display: none !important;
+      }
+
+      .hero {
+        padding: 80px 0 90px;
+      }
+
+      .hero-inner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .hero-content {
+        flex: 1;
+      }
+
+      .hero-visual {
+        flex: 0 0 auto;
+      }
+
+      .hero-buttons .btn {
+        flex: 0 0 auto;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero h1 {
+        font-size: 4rem;
+      }
+    }
+
+    /* Mobile rregullime për Hero */
+    @media (max-width: 767px) {
+      .gear-1 { font-size: 100px; }
+      .gear-2 { font-size: 130px; }
+      .gear-3 { font-size: 70px; }
+      .hero-screw { font-size: 120px; }
+      .hero {
+        padding: 50px 0 60px;
+        min-height: 500px;
+      }
+      .spark { width: 2px; height: 2px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======== HEADER ======== -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="Vegla Punë Dardha - Kreu">
+        <!-- 
+          ⚠️ ZËVENDËSONI KËTË URL ME LOGON TUAJ REALE 
+          P.sh.: "https://domaini-juaj.com/logo.png"
+        -->
+        <img src="https://i.ibb.co/6P0y0y0/logo-placeholder.png" alt="Logo Vegla Punë Dardha" class="logo-img" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('afterbegin','<span style=\'width:36px;height:36px;background:var(--red);border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1rem;font-weight:800;flex-shrink:0;\'>VP</span>')">
+        Vegla Punë <span>Dardha</span>
+      </a>
+
+      <nav class="nav" aria-label="Navigimi kryesor">
+        <a href="#produkte">Produkte</a>
+        <a href="#pse-ne">Pse ne</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+355688353311" class="btn btn-primary btn-sm header-phone pulse-btn-red" aria-label="Telefono tani">
+          📞 Telefono
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Hap menunë" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile nav -->
+  <nav class="nav-mobile" id="mobileNav" aria-label="Navigimi mobil">
+    <a href="#produkte">Produkte</a>
+    <a href="#pse-ne">Pse ne</a>
+    <a href="#kontakt">Kontakt</a>
+    <a href="tel:+355688353311" style="color:var(--red); font-weight:700;">📞 068 835 3311</a>
+  </nav>
+
+  <!-- ======== HERO INDUSTRIAL ======== -->
+  <section class="hero">
+    <!-- Rrotat e dhëmbëzuara në sfond -->
+    <div class="gear-bg" aria-hidden="true">
+      <span class="gear gear-1">⚙️</span>
+      <span class="gear gear-2">⚙️</span>
+      <span class="gear gear-3">⚙️</span>
+    </div>
+
+    <!-- Vidha qendrore që rrotullohet -->
+    <span class="hero-screw" aria-hidden="true">🔩</span>
+
+    <!-- Shkëndijat -->
+    <div class="sparks" aria-hidden="true">
+      <span class="spark"></span>
+      <span class="spark"></span>
+      <span class="spark"></span>
+      <span class="spark"></span>
+      <span class="spark"></span>
+      <span class="spark"></span>
+      <span class="spark"></span>
+    </div>
+
+    <!-- Vija e skanimit -->
+    <div class="scan-line" aria-hidden="true"></div>
+
+    <div class="container hero-inner">
+      <div class="hero-content animate-fade-up">
+        <h1>Vegla pune që <em class="typewriter">bëjnë punën</em>.</h1>
+        <p>Marka të njohura, çmime të dukshme dhe këshillim profesional. Hapur deri në 23:30, çdo ditë.</p>
+        <div class="hero-buttons">
+          <a href="#produkte" class="btn btn-primary pulse-btn-red">Shiko produktet</a>
+          <a href="https://wa.me/355688353311?text=P%C3%ABrsh%C3%ABndetje%2C%20kam%20nj%C3%AB%20pyetje%20p%C3%ABr%20vegla%20pune." class="btn btn-wa pulse-btn-green" target="_blank" rel="noopener">
+            💬 WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="price-tag animate-fade-up delay-1">
+          <div class="tag-label">Ofertë</div>
+          <div class="tag-name">Trapan me bateri</div>
+          <div class="tag-price">9,900 lekë</div>
+        </div>
+        <div class="price-tag animate-fade-up delay-2">
+          <div class="tag-label">Më i shitur</div>
+          <div class="tag-name">Kompresor ajri 100L</div>
+          <div class="tag-price">35,000 lekë</div>
+        </div>
+        <div class="price-tag animate-fade-up delay-3">
+          <div class="tag-label">Siguri</div>
+          <div class="tag-name">Fikëse zjarri 6kg</div>
+          <div class="tag-price">2,800 lekë</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== CATEGORIES ======== -->
+  <section class="section" id="kategorite">
+    <div class="container">
+      <div class="section-header animate-fade-up">
+        <h2>Kategoritë</h2>
+        <p>Gjej shpejt atë që të duhet.</p>
+      </div>
+      <div class="categories-grid">
+        <a href="#produkte" class="category-card animate-fade-up delay-1" data-category="bateri">
+          <span class="category-icon">🔋</span>
+          <h3>Vegla me bateri</h3>
+          <p>Trapan, matrapik, frezibël</p>
+        </a>
+        <a href="#produkte" class="category-card animate-fade-up delay-2" data-category="elektrike">
+          <span class="category-icon">⚡</span>
+          <h3>Vegla elektrike</h3>
+          <p>Motosharra, zmerilues, saldatricë</p>
+        </a>
+        <a href="#produkte" class="category-card animate-fade-up delay-3" data-category="ndertim">
+          <span class="category-icon">🏗️</span>
+          <h3>Ndërtim</h3>
+          <p>Prerëse, shkallë, karrocë</p>
+        </a>
+        <a href="#produkte" class="category-card animate-fade-up delay-4" data-category="dore">
+          <span class="category-icon">🔧</span>
+          <h3>Vegla dore</h3>
+          <p>Çekiç, çelësa, darë</p>
+        </a>
+        <a href="#produkte" class="category-card animate-fade-up delay-1" data-category="siguri">
+          <span class="category-icon">🦺</span>
+          <h3>Siguri</h3>
+          <p>Fikëse zjarri, doreza, kaska</p>
+        </a>
+        <a href="#produkte" class="category-card animate-fade-up delay-2" data-category="hidraulike">
+          <span class="category-icon">🚿</span>
+          <h3>Hidraulike & shtëpi</h3>
+          <p>Filtra, lavazh, aksesorë</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== CATALOG ======== -->
+  <section class="section" id="produkte" style="background:var(--grey-light);">
+    <div class="container">
+      <div class="section-header animate-fade-up">
+        <h2>Produktet</h2>
+        <p>Mbi 50 produkte me çmime të dukshme. Për çmime të tjera, pyesni në WhatsApp.</p>
+      </div>
+
+      <div class="catalog-controls animate-fade-up delay-1">
+        <div class="search-wrapper">
+          <label for="searchInput" class="sr-only">Kërko produkte</label>
+          <input type="search" id="searchInput" placeholder="Kërko produkt... (p.sh. trapan, fikëse)" autocomplete="off">
+        </div>
+        <div class="filter-buttons" id="filterButtons" role="group" aria-label="Filtro sipas kategorisë">
+          <button class="filter-btn active" data-filter="all">Të gjitha</button>
+          <button class="filter-btn" data-filter="bateri">Me bateri</button>
+          <button class="filter-btn" data-filter="elektrike">Elektrike</button>
+          <button class="filter-btn" data-filter="ndertim">Ndërtim</button>
+          <button class="filter-btn" data-filter="dore">Dore</button>
+          <button class="filter-btn" data-filter="siguri">Siguri</button>
+          <button class="filter-btn" data-filter="hidraulike">Hidraulike</button>
+        </div>
+      </div>
+
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ======== PSE NE ======== -->
+  <section class="section" id="pse-ne">
+    <div class="container">
+      <div class="section-header animate-fade-up">
+        <h2>Pse ne?</h2>
+        <p>Më shumë se një dyqan — një partner pune.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card animate-fade-up delay-1">
+          <div class="why-icon">🏷️</div>
+          <div>
+            <h3>Çmime të dukshme</h3>
+            <p>Nuk ka surpriza. Çdo produkt ka çmimin e shënuar qartë.</p>
+          </div>
+        </div>
+        <div class="why-card animate-fade-up delay-2">
+          <div class="why-icon">🏆</div>
+          <div>
+            <h3>Marka të njohura</h3>
+            <p>Ingco, Total, Emtop, Kaiser, Tolsen, MaxPuls, Wellmax.</p>
+          </div>
+        </div>
+        <div class="why-card animate-fade-up delay-3">
+          <div class="why-icon">🕐</div>
+          <div>
+            <h3>Hapur deri vonë</h3>
+            <p>Çdo ditë deri në 23:30. Për ata që punojnë me orar të zgjatur.</p>
+          </div>
+        </div>
+        <div class="why-card animate-fade-up delay-4">
+          <div class="why-icon">🧠</div>
+          <div>
+            <h3>Këshillim profesional</h3>
+            <p>Stafi ju ndihmon të zgjidhni veglën e duhur për punën tuaj.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== CONTACT ======== -->
+  <section class="contact-section" id="kontakt">
+    <div class="container">
+      <div class="section-header animate-fade-up">
+        <h2>Kontakt</h2>
+        <p>Jemi këtu për t'ju ndihmuar.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card animate-fade-up delay-1">
+          <h3>📍 Adresa</h3>
+          <p>Rr. Siri Kodra, Bulevardi i Ri<br>Tiranë, Shqipëri</p>
+          <p style="margin-top:12px;">
+            <a href="https://maps.google.com/?q=Rr.+Siri+Kodra,+Bulevardi+i+Ri,+Tirana" target="_blank" rel="noopener" style="color:var(--red); font-weight:600;">
+              Hap në Google Maps →
+            </a>
+          </p>
+        </div>
+        <div class="contact-card animate-fade-up delay-2">
+          <h3>📞 Telefon & WhatsApp</h3>
+          <a href="tel:+355688353311" class="contact-phone-big">068 835 3311</a>
+          <div class="contact-buttons">
+            <a href="tel:+355688353311" class="btn btn-primary btn-sm pulse-btn-red">Telefono</a>
+            <a href="https://wa.me/355688353311?text=P%C3%ABrsh%C3%ABndetje%2C%20kam%20nj%C3%AB%20pyetje." class="btn btn-wa btn-sm pulse-btn-green" target="_blank" rel="noopener">
+              💬 WhatsApp
+            </a>
+            <a href="https://instagram.com/vegla_pune_dardha" class="btn btn-outline btn-sm" target="_blank" rel="noopener" style="border-color:rgba(255,255,255,0.3); color:#fff;">
+              📸 Instagram
+            </a>
+          </div>
+        </div>
+        <div class="contact-card animate-fade-up delay-3" style="grid-column: 1 / -1;">
+          <h3>🕐 Orari</h3>
+          <p>E Hënë – E Diel: <strong style="color:#fff;">08:00 – 23:30</strong></p>
+          <p style="margin-top:8px;">
+            <span class="hours-badge">🟢 Hapur tani</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="footer">
+    <div class="container">
+      <p><strong>Vegla Punë Dardha</strong> — Rr. Siri Kodra, Bulevardi i Ri, Tiranë</p>
+      <p style="margin-top:4px;">© 2025 Vegla Punë Dardha. Të gjitha të drejtat e rezervuara.</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button (shfaqet vetëm në telefon) -->
+  <a href="https://wa.me/355688353311?text=P%C3%ABrsh%C3%ABndetje%2C%20kam%20nj%C3%AB%20pyetje." 
+     class="floating-wa" 
+     target="_blank" 
+     rel="noopener" 
+     aria-label="Dërgo mesazh në WhatsApp">
+    💬
+  </a>
+
+  <!-- ======== JAVASCRIPT ======== -->
+  <script>
+    // =============================================
+    // 1. IMAGE URLs — ZËVENDËSONI ME FOTOT TUAJA REALE
+    // =============================================
+    const IMAGE_URLS = {
+      trapan_bateri: "https://images.unsplash.com/photo-1581147036324-c1c89c2c2c95?w=600&h=600&fit=crop",
+      matrapik_bateri: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=600&h=600&fit=crop",
+      frezibel_bateri: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&h=600&fit=crop",
+      tronkatrice_bateri: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&h=600&fit=crop",
+      trapan_800w: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=600&h=600&fit=crop",
+      matrapik_1500w: "https://images.unsplash.com/photo-1581147036324-c1c89c2c2c95?w=600&h=600&fit=crop",
+      motosharre_2000w: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&h=600&fit=crop",
+      sharre_vertikale: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&h=600&fit=crop",
+      zmerilues_bango: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=600&h=600&fit=crop",
+      mini_zmerilues: "https://images.unsplash.com/photo-1581147036324-c1c89c2c2c95?w=600&h=600&fit=crop",
+      zmerilues_muri: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&h=600&fit=crop",
+      saldatrice: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&h=600&fit=crop",
+      frezibel_elektrik: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=600&h=600&fit=crop",
+      pistolete_ngjitje: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&h=600&fit=crop",
+      prerese_pllakash: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&h=600&fit=crop",
+      shkalle_alumini: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&h=600&fit=crop",
+      shkalle_5x5: "https://images.unsplash.com/photo-1581147036324-c1c89c2c2c95?w=600&h=600&fit=crop",
+      shkalle_6x6: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=600&h=600&fit=crop",
+      karroce: "https://images.unsplash.com/photo-1581147036324-c1c89c2c2c95?w=600&h=600&fit=crop",
+      bordure: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&h=600&fit=crop",
+      mprehese: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&h=600&fit=crop",
+      raft: "https://images.unsplash.com/photo-1581147036324-c1c89c2c2c95?w=600&h=600&fit=crop",
+      trapano_banco: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=600&h=600&fit=crop",
+      kariole: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&h=600&fit=crop",
+      çekic: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&h=600&fit=crop",
+      çelesa: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&h=600&fit=crop",
+      kaçavida: "https://images.unsplash.com/photo-1581147036324-c1c89c2c2c95?w=600&h=600&fit=crop",
+      pinca: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=600&h=600&fit=crop",
+      metro: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&h=600&fit=crop",
+      nivel: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&h=600&fit=crop",
+      rul_paint: "https://images.unsplash.com/photo-1581147036324-c1c89c2c2c95?w=600&h=600&fit=crop",
+      pistolete_boje: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=600&h=600&fit=crop",
+      fikese_2kg: "https://images.unsplash.com/photo-1581147036324-c1c89c2c2c95?w=600&h=600&fit=crop",
+      fikese_zjarri: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=600&h=600&fit=crop",
+      fikese_9kg: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&h=600&fit=crop",
+      fikese_12kg: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&h=600&fit=crop",
+      kaskë: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&h=600&fit=crop",
+      doreza: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&h=600&fit=crop",
+      gjenerator: "https://images.unsplash.com/photo-1581147036324-c1c89c2c2c95?w=600&h=600&fit=crop",
+      kompresor: "https://images.unsplash.com/photo-1581147036324-c1c89c2c2c95?w=600&h=600&fit=crop",
+      lavazh: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=600&h=600&fit=crop",
+      filter_uji: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&h=600&fit=crop",
+      skare: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&h=600&fit=crop",
+      gardh: "https://images.unsplash.com/photo-1581147036324-c1c89c2c2c95?w=600&h=600&fit=crop",
+      projektor: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=600&h=600&fit=crop",
+      kompresor_50l: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&h=600&fit=crop",
+      filtër_uji_2: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&h=600&fit=crop"
+    };
+
+    // =============================================
+    // 2. PRODUCT DATA
+    // =============================================
+    const products = [
+      { id: 1, name: "Trapan me bateri", brand: "Ingco", price: 9900, category: "bateri", img: IMAGE_URLS.trapan_bateri, badge: "Ofertë" },
+      { id: 2, name: "Matrapik me bateri", brand: "Total", price: 8800, category: "bateri", img: IMAGE_URLS.matrapik_bateri, badge: "" },
+      { id: 3, name: "Frezibël me bateri", brand: "Emtop", price: 6000, category: "bateri", img: IMAGE_URLS.frezibel_bateri, badge: "" },
+      { id: 4, name: "Tronkatrice me bateri", brand: "Ingco", price: 10000, category: "bateri", img: IMAGE_URLS.tronkatrice_bateri, badge: "" },
+      { id: 5, name: "Trapan me bateri + 2 bateri", brand: "Total", price: 9500, category: "bateri", img: IMAGE_URLS.trapan_bateri, badge: "Ofertë" },
+      { id: 6, name: "Matrapik me bateri (trup)", brand: "Total", price: 8800, category: "bateri", img: IMAGE_URLS.matrapik_bateri, badge: "" },
+      { id: 7, name: "Trapan me bateri 2Ah", brand: "Total", price: 9500, category: "bateri", img: IMAGE_URLS.trapan_bateri, badge: "Ofertë" },
+      { id: 8, name: "Set bateri + karikues", brand: "Ingco", price: null, category: "bateri", img: IMAGE_URLS.frezibel_bateri, badge: "" },
+      { id: 9, name: "Trapan 800W", brand: "Ingco", price: 6000, category: "elektrike", img: IMAGE_URLS.trapan_800w, badge: "" },
+      { id: 10, name: "Matrapik 1500W", brand: "Total", price: 8500, category: "elektrike", img: IMAGE_URLS.matrapik_1500w, badge: "Ofertë" },
+      { id: 11, name: "Motosharre 2000W", brand: "MaxPuls", price: 8900, category: "elektrike", img: IMAGE_URLS.motosharre_2000w, badge: "Ofertë" },
+      { id: 12, name: "Sharrë vertikale 400W", brand: "MaxPuls", price: 3500, category: "elektrike", img: IMAGE_URLS.sharre_vertikale, badge: "" },
+      { id: 13, name: "Zmerilues bango 150W", brand: "Emtop", price: 4400, category: "elektrike", img: IMAGE_URLS.zmerilues_bango, badge: "" },
+      { id: 14, name: "Mini zmerilues + aksesorë", brand: "Total", price: 4500, category: "elektrike", img: IMAGE_URLS.mini_zmerilues, badge: "" },
+      { id: 15, name: "Zmerilues muri 1050W", brand: "Total", price: 10000, category: "elektrike", img: IMAGE_URLS.zmerilues_muri, badge: "Ofertë" },
+      { id: 16, name: "Saldatricë Kaiser 150A", brand: "Kaiser", price: 11500, category: "elektrike", img: IMAGE_URLS.saldatrice, badge: "" },
+      { id: 17, name: "Frezibël elektrik", brand: "Ingco", price: 6500, category: "elektrike", img: IMAGE_URLS.frezibel_elektrik, badge: "" },
+      { id: 18, name: "Pistoletë ngjitjeje me bateri", brand: "Ingco", price: 4500, category: "elektrike", img: IMAGE_URLS.pistolete_ngjitje, badge: "" },
+      { id: 19, name: "Prerëse pllakash 120cm", brand: "Total", price: 10500, category: "ndertim", img: IMAGE_URLS.prerese_pllakash, badge: "Ofertë" },
+      { id: 20, name: "Shkallë alumini 4x4", brand: "Wellmax", price: 10500, category: "ndertim", img: IMAGE_URLS.shkalle_alumini, badge: "" },
+      { id: 21, name: "Shkallë alumini 5x5", brand: "Wellmax", price: 12500, category: "ndertim", img: IMAGE_URLS.shkalle_5x5, badge: "" },
+      { id: 22, name: "Shkallë alumini 6x6", brand: "Wellmax", price: 14500, category: "ndertim", img: IMAGE_URLS.shkalle_6x6, badge: "" },
+      { id: 23, name: "Karrocë 200kg", brand: "Tolsen", price: 5500, category: "ndertim", img: IMAGE_URLS.karroce, badge: "" },
+      { id: 24, name: "Bordurë rruge 1m", brand: "", price: 2300, category: "ndertim", img: IMAGE_URLS.bordure, badge: "" },
+      { id: 25, name: "Mprehëse për punto 2-13mm", brand: "Ingco", price: 900, category: "ndertim", img: IMAGE_URLS.mprehese, badge: "" },
+      { id: 26, name: "Raft metalik 190x90x40", brand: "", price: 4900, category: "ndertim", img: IMAGE_URLS.raft, badge: "Sasi e limituar" },
+      { id: 27, name: "Trapano banco", brand: "Total", price: null, category: "ndertim", img: IMAGE_URLS.trapano_banco, badge: "" },
+      { id: 28, name: "Kariolë", brand: "", price: null, category: "ndertim", img: IMAGE_URLS.kariole, badge: "" },
+      { id: 29, name: "Çekiç", brand: "Tolsen", price: null, category: "dore", img: IMAGE_URLS.çekic, badge: "" },
+      { id: 30, name: "Set çelësash", brand: "Tolsen", price: null, category: "dore", img: IMAGE_URLS.çelesa, badge: "" },
+      { id: 31, name: "Set kaçavidash", brand: "Ingco", price: null, category: "dore", img: IMAGE_URLS.kaçavida, badge: "" },
+      { id: 32, name: "Pincë", brand: "Tolsen", price: null, category: "dore", img: IMAGE_URLS.pinca, badge: "" },
+      { id: 33, name: "Metro 5m", brand: "Tolsen", price: null, category: "dore", img: IMAGE_URLS.metro, badge: "" },
+      { id: 34, name: "Nivel", brand: "Tolsen", price: null, category: "dore", img: IMAGE_URLS.nivel, badge: "" },
+      { id: 35, name: "Rul boje", brand: "Wellmax", price: null, category: "dore", img: IMAGE_URLS.rul_paint, badge: "" },
+      { id: 36, name: "Pistoletë boje 1.4mm", brand: "Kaiser", price: 3000, category: "dore", img: IMAGE_URLS.pistolete_boje, badge: "" },
+      { id: 37, name: "Fikëse zjarri 2kg", brand: "", price: 1700, category: "siguri", img: IMAGE_URLS.fikese_2kg, badge: "" },
+      { id: 38, name: "Fikëse zjarri 6kg", brand: "", price: 2800, category: "siguri", img: IMAGE_URLS.fikese_zjarri, badge: "" },
+      { id: 39, name: "Fikëse zjarri 9kg", brand: "", price: 3800, category: "siguri", img: IMAGE_URLS.fikese_9kg, badge: "" },
+      { id: 40, name: "Fikëse zjarri 12kg", brand: "", price: 4900, category: "siguri", img: IMAGE_URLS.fikese_12kg, badge: "" },
+      { id: 41, name: "Kaskë mbrojtëse", brand: "", price: null, category: "siguri", img: IMAGE_URLS.kaskë, badge: "" },
+      { id: 42, name: "Doreza mbrojtëse", brand: "", price: null, category: "siguri", img: IMAGE_URLS.doreza, badge: "" },
+      { id: 43, name: "Gjenerator", brand: "MaxPuls", price: null, category: "siguri", img: IMAGE_URLS.gjenerator, badge: "" },
+      { id: 44, name: "Kompresor ajri 100L", brand: "MaxPuls", price: 35000, category: "hidraulike", img: IMAGE_URLS.kompresor, badge: "" },
+      { id: 45, name: "Lavazh 2500W", brand: "Wellmax", price: 13500, category: "hidraulike", img: IMAGE_URLS.lavazh, badge: "Ofertë" },
+      { id: 46, name: "Filtër uji 3-capa", brand: "Wellmax", price: 4000, category: "hidraulike", img: IMAGE_URLS.filter_uji, badge: "Ofertë" },
+      { id: 47, name: "Skarë", brand: "", price: 4500, category: "hidraulike", img: IMAGE_URLS.skare, badge: "" },
+      { id: 48, name: "Gardh artificial 3x1m", brand: "", price: 1800, category: "hidraulike", img: IMAGE_URLS.gardh, badge: "" },
+      { id: 49, name: "Projektor LED", brand: "Wellmax", price: 1200, category: "hidraulike", img: IMAGE_URLS.projektor, badge: "" },
+      { id: 50, name: "Kompresor ajri 50L", brand: "MaxPuls", price: null, category: "hidraulike", img: IMAGE_URLS.kompresor_50l, badge: "" },
+      { id: 51, name: "Valixhe me rrota", brand: "Tolsen", price: 4500, category: "hidraulike", img: IMAGE_URLS.kariole, badge: "" },
+      { id: 52, name: "Filtër uji i freskët", brand: "Wellmax", price: 4000, category: "hidraulike", img: IMAGE_URLS.filtër_uji_2, badge: "Ofertë" }
+    ];
+
+    // =============================================
+    // 3. RENDER PRODUCTS
+    // =============================================
+    const grid = document.getElementById('productGrid');
+    const searchInput = document.getElementById('searchInput');
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    let activeFilter = 'all';
+    let searchTerm = '';
+
+    function formatPrice(price) {
+      if (price === null || price === undefined) return '<span class="ask">Pyet çmimin</span>';
+      return price.toLocaleString('sq-AL') + ' lekë';
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    function renderProducts() {
+      const filtered = products.filter(p => {
+        const matchesFilter = activeFilter === 'all' || p.category === activeFilter;
+        const matchesSearch = p.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                              p.brand.toLowerCase().includes(searchTerm.toLowerCase());
+        return matchesFilter && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '<div class="no-results">Nuk u gjet asnjë produkt. Provoni një kërkim tjetër.</div>';
+        return;
+      }
+
+      grid.innerHTML = filtered.map((p, index) => {
+        const hasImg = p.img && p.img.length > 0;
+        const badgeHtml = p.badge ? '<span class="badge-oferte">' + escapeHtml(p.badge) + '</span>' : '';
+        const waMessage = encodeURIComponent('Përshëndetje, kam pyetje për produktin: ' + p.name + ' (' + (p.brand || 'Pa markë') + '). Çmimi: ' + (p.price ? p.price.toLocaleString('sq-AL') + ' lekë' : 'Pyet çmimin') + '.');
+        const waLink = 'https://wa.me/355688353311?text=' + waMessage;
+        const animDelay = (index % 8) * 0.06;
+
+        return `
+          <article class="product-card" style="animation-delay: ${animDelay}s;">
+            <div class="product-image">
+              ${badgeHtml}
+              ${hasImg
+                ? '<img src="' + p.img + '" alt="' + escapeHtml(p.name) + '" loading="lazy" onerror="this.style.display=\'none\';this.parentElement.insertAdjacentHTML(\'afterbegin\',\'<div class=&quot;placeholder&quot;>🔧</div>\')">'
+                : '<div class="placeholder">🔧</div>'
+              }
+            </div>
+            <div class="product-info">
+              ${p.brand ? '<span class="product-brand">' + escapeHtml(p.brand) + '</span>' : ''}
+              <h3 class="product-name">${escapeHtml(p.name)}</h3>
+              <div class="product-price">${formatPrice(p.price)}</div>
+            </div>
+            <div class="product-actions">
+              <a href="${waLink}" target="_blank" rel="noopener" class="btn btn-primary btn-sm" aria-label="Pyet për ${escapeHtml(p.name)}">💬 Pyet</a>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    // =============================================
+    // 4. EVENTS
+    // =============================================
+    searchInput.addEventListener('input', (e) => {
+      searchTerm = e.target.value.trim();
+      renderProducts();
+    });
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeFilter = btn.dataset.filter;
+        renderProducts();
+      });
+    });
+
+    document.querySelectorAll('.category-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        const cat = card.dataset.category;
+        if (cat) {
+          e.preventDefault();
+          const targetBtn = document.querySelector('.filter-btn[data-filter="' + cat + '"]');
+          if (targetBtn) {
+            filterButtons.forEach(b => b.classList.remove('active'));
+            targetBtn.classList.add('active');
+            activeFilter = cat;
+            renderProducts();
+            document.getElementById('produkte').scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      });
+    });
+
+    // =============================================
+    // 5. MOBILE NAV
+    // =============================================
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileNav = document.getElementById('mobileNav');
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('open');
+      menuToggle.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+        menuToggle.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // =============================================
+    // 6. INIT
+    // =============================================
+    renderProducts();
+  </script>
+</body>
+</html>
