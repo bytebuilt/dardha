@@ -56,8 +56,8 @@
       --text: #1A1A1A;
       --text-muted: #666;
       --white: #FFFFFF;
-      --radius: 8px;
-      --shadow: 0 4px 16px rgba(0,0,0,0.08);
+      --radius: 12px;
+      --shadow: 0 8px 30px rgba(0,0,0,0.08);
       --font-head: 'Barlow Condensed', sans-serif;
       --font-body: 'Inter', sans-serif;
       --transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -73,7 +73,7 @@
         --text: #F0F0F0;
         --text-muted: #AAA;
         --white: #1E1E1E;
-        --shadow: 0 4px 16px rgba(0,0,0,0.4);
+        --shadow: 0 8px 30px rgba(0,0,0,0.4);
       }
     }
 
@@ -125,11 +125,7 @@
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 12px;
-    }
-
-    @media (min-width: 480px) {
-      .container { padding: 0 16px; }
+      padding: 0 16px;
     }
 
     .sr-only {
@@ -148,44 +144,40 @@
       outline-offset: 2px;
     }
 
-    /* =========================================
-       ANIMACIONET
-       ========================================= */
-    
+    /* ---------- Icons ---------- */
+    .icon {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+      flex-shrink: 0;
+    }
+
+    .icon-lg {
+      width: 32px;
+      height: 32px;
+    }
+
+    /* ---------- Animations ---------- */
     @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
+      from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    @keyframes float {
+    @keyframes floatSoft {
       0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+      50% { transform: translateY(-8px); }
     }
 
     @keyframes pulseRed {
-      0% { box-shadow: 0 0 0 0 rgba(211,40,28,0.7); }
-      70% { box-shadow: 0 0 0 15px rgba(211,40,28,0); }
+      0% { box-shadow: 0 0 0 0 rgba(211,40,28,0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(211,40,28,0); }
       100% { box-shadow: 0 0 0 0 rgba(211,40,28,0); }
     }
 
     @keyframes pulseGreen {
-      0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.7); }
-      70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); }
+      0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(37,211,102,0); }
       100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
-    }
-
-    @keyframes typing {
-      from { width: 0; }
-      to { width: 100%; }
-    }
-
-    @keyframes blink {
-      50% { border-color: transparent; }
-    }
-
-    @keyframes floatIcon {
-      0%, 100% { transform: translateY(0) rotate(0deg); }
-      50% { transform: translateY(-6px) rotate(3deg); }
     }
 
     @keyframes lineGrow {
@@ -193,35 +185,6 @@
       to { width: 48px; }
     }
 
-    @keyframes glow {
-      0%, 100% { text-shadow: 0 0 5px rgba(211,40,28,0); }
-      50% { text-shadow: 0 0 10px rgba(211,40,28,0.5); }
-    }
-
-    /* Animacione për Hero Industrial */
-    @keyframes rotateGear {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
-    @keyframes rotateScrew {
-      from { transform: translate(-50%, -50%) rotate(0deg); }
-      to { transform: translate(-50%, -50%) rotate(360deg); }
-    }
-
-    @keyframes sparkFly {
-      0% { opacity: 0; transform: translate(0, 0) scale(0); }
-      20% { opacity: 1; transform: translate(0, 0) scale(1.5); }
-      100% { opacity: 0; transform: translate(30px, -80px) scale(0); }
-    }
-
-    @keyframes scanLine {
-      0% { top: -10%; opacity: 0; }
-      50% { opacity: 1; }
-      100% { top: 110%; opacity: 0; }
-    }
-
-    /* Klasat */
     .animate-fade-up {
       animation: fadeInUp 0.8s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
       opacity: 0;
@@ -232,20 +195,12 @@
     .delay-3 { animation-delay: 0.3s; }
     .delay-4 { animation-delay: 0.4s; }
 
-    .pulse-btn-red { animation: pulseRed 2s infinite; }
-    .pulse-btn-green { animation: pulseGreen 2s infinite; }
-
-    .typewriter {
-      display: inline-block;
-      overflow: hidden;
-      white-space: nowrap;
-      border-right: 3px solid var(--red);
-      animation: typing 2s steps(30, end), blink 0.75s step-end infinite;
+    .float-soft {
+      animation: floatSoft 6s ease-in-out infinite;
     }
 
-    .category-card:hover .category-icon {
-      animation: floatIcon 1.5s ease-in-out infinite;
-    }
+    .pulse-btn-red { animation: pulseRed 2.5s infinite; }
+    .pulse-btn-green { animation: pulseGreen 2.5s infinite; }
 
     .section-header h2::after {
       content: '';
@@ -258,19 +213,11 @@
       animation: lineGrow 0.8s ease forwards;
     }
 
-    .product-card:hover .product-price {
-      animation: glow 1.5s ease-in-out infinite;
-    }
-
     @media (prefers-reduced-motion: reduce) {
       .animate-fade-up { animation: none; opacity: 1; }
-      .price-tag { animation: none !important; }
-      .typewriter { animation: none; border-right: none; width: 100%; }
+      .float-soft { animation: none; }
       .pulse-btn-red, .pulse-btn-green { animation: none; }
-      .category-card:hover .category-icon { animation: none; }
       .section-header h2::after { animation: none; width: 48px; }
-      .product-card:hover .product-price { animation: none; }
-      .gear, .hero-screw, .spark, .scan-line { animation: none !important; }
     }
 
     /* ---------- Buttons ---------- */
@@ -280,11 +227,11 @@
       justify-content: center;
       gap: 8px;
       min-height: 48px;
-      padding: 12px 20px;
+      padding: 12px 24px;
       border-radius: var(--radius);
       font-weight: 600;
       font-size: 0.95rem;
-      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+      transition: all var(--transition);
       text-align: center;
       -webkit-tap-highlight-color: transparent;
       position: relative;
@@ -292,46 +239,69 @@
     }
 
     .btn:active {
-      transform: scale(0.96);
+      transform: scale(0.97);
     }
 
     .btn-primary {
       background: var(--red);
       color: #fff;
-      box-shadow: 0 4px 12px rgba(211,40,28,0.3);
+      box-shadow: 0 4px 15px rgba(211,40,28,0.3);
     }
 
     .btn-primary:hover {
       background: var(--red-dark);
-      box-shadow: 0 6px 16px rgba(211,40,28,0.4);
+      box-shadow: 0 6px 20px rgba(211,40,28,0.4);
+      transform: translateY(-2px);
     }
 
     .btn-wa {
       background: #25D366;
       color: #fff;
-      box-shadow: 0 4px 12px rgba(37,211,102,0.3);
+      box-shadow: 0 4px 15px rgba(37,211,102,0.3);
     }
 
     .btn-wa:hover {
       background: #1DA851;
-      box-shadow: 0 6px 16px rgba(37,211,102,0.4);
+      box-shadow: 0 6px 20px rgba(37,211,102,0.4);
+      transform: translateY(-2px);
     }
 
     .btn-outline {
       background: transparent;
-      border: 2px solid var(--text);
+      border: 2px solid var(--grey-border);
       color: var(--text);
     }
 
     .btn-outline:hover {
-      background: var(--text);
-      color: var(--white);
+      background: var(--grey-light);
+      border-color: var(--text);
     }
 
     .btn-sm {
       min-height: 44px;
       padding: 8px 16px;
       font-size: 0.85rem;
+    }
+
+    .btn-wa-sm {
+      background: #25D366;
+      color: #fff;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 10px 14px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: all var(--transition);
+      width: 100%;
+    }
+
+    .btn-wa-sm:hover {
+      background: #1DA851;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(37,211,102,0.3);
     }
 
     /* ---------- Header ---------- */
@@ -341,48 +311,27 @@
       z-index: 100;
       background: var(--white);
       border-bottom: 3px solid var(--red);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
 
     .header-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 60px;
-      gap: 8px;
-    }
-
-    @media (min-width: 768px) {
-      .header-inner { height: 64px; gap: 16px; }
+      height: 64px;
+      gap: 12px;
     }
 
     .logo {
       font-family: var(--font-head);
       font-weight: 800;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       line-height: 1.1;
       color: var(--text);
       display: flex;
       align-items: center;
       gap: 8px;
       white-space: nowrap;
-      min-height: 44px;
-    }
-
-    @media (min-width: 480px) {
-      .logo { font-size: 1.3rem; }
-    }
-
-    .logo-img {
-      width: 32px;
-      height: 32px;
-      object-fit: contain;
-      border-radius: 6px;
-      flex-shrink: 0;
-    }
-
-    @media (min-width: 480px) {
-      .logo-img { width: 36px; height: 36px; }
     }
 
     .logo span {
@@ -391,7 +340,7 @@
 
     .nav {
       display: none;
-      gap: 24px;
+      gap: 28px;
       align-items: center;
     }
 
@@ -400,16 +349,13 @@
       font-weight: 500;
       color: var(--text-muted);
       transition: color var(--transition);
-      min-height: 44px;
-      display: flex;
-      align-items: center;
       position: relative;
     }
 
     .nav a::after {
       content: '';
       position: absolute;
-      bottom: 0;
+      bottom: -4px;
       left: 0;
       width: 0;
       height: 2px;
@@ -435,7 +381,6 @@
       display: none;
     }
 
-    /* ---------- Mobile Nav Toggle ---------- */
     .menu-toggle {
       display: flex;
       flex-direction: column;
@@ -469,130 +414,34 @@
       transform: translateY(-7px) rotate(-45deg);
     }
 
-    /* =========================================
-       HERO INDUSTRIAL (Efekti vizual)
-       ========================================= */
+    /* ---------- Hero Section ---------- */
     .hero {
       position: relative;
-      overflow: hidden;
-      background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 50%, #0A0A0A 100%);
+      background: linear-gradient(135deg, #0F0F0F 0%, #1A1A1A 50%, #0A0A0A 100%);
       color: #fff;
-      padding: 60px 0 70px;
-      min-height: 560px;
-      display: flex;
-      align-items: center;
-    }
-
-    /* Rrotat e dhëmbëzuara në sfond */
-    .gear-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 0;
-      opacity: 0.08;
+      padding: 60px 0 80px;
       overflow: hidden;
     }
 
-    .gear {
-      position: absolute;
-      color: var(--red);
-      animation: rotateGear 25s linear infinite;
-      user-select: none;
-      line-height: 1;
-    }
-
-    .gear-1 { top: 5%; left: 3%; font-size: 180px; animation-duration: 28s; animation-direction: reverse; }
-    .gear-2 { bottom: 8%; right: 3%; font-size: 240px; animation-duration: 38s; }
-    .gear-3 { top: 42%; left: 42%; font-size: 120px; animation-duration: 20s; animation-direction: reverse; }
-
-    /* Vidha qendrore */
-    .hero-screw {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 200px;
-      color: rgba(211, 40, 28, 0.06);
-      animation: rotateScrew 18s linear infinite;
-      pointer-events: none;
-      z-index: 0;
-      user-select: none;
-      line-height: 1;
-    }
-
-    /* Shkëndijat */
-    .sparks {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 1;
-      overflow: hidden;
-    }
-
-    .spark {
-      position: absolute;
-      width: 3px;
-      height: 3px;
-      background: #FFD700;
-      border-radius: 50%;
-      box-shadow: 0 0 8px 3px #FFD700, 0 0 16px 5px #FF6600;
-      opacity: 0;
-      animation: sparkFly 3.5s ease-out infinite;
-    }
-
-    .spark:nth-child(1) { top: 25%; left: 15%; animation-delay: 0s; }
-    .spark:nth-child(2) { top: 65%; left: 75%; animation-delay: 0.7s; }
-    .spark:nth-child(3) { top: 15%; left: 85%; animation-delay: 1.4s; }
-    .spark:nth-child(4) { top: 80%; left: 25%; animation-delay: 2.1s; }
-    .spark:nth-child(5) { top: 45%; left: 50%; animation-delay: 0.9s; }
-    .spark:nth-child(6) { top: 12%; left: 45%; animation-delay: 2.8s; }
-    .spark:nth-child(7) { top: 70%; left: 60%; animation-delay: 1.7s; }
-
-    /* Vija diagonale */
-    .hero::after {
+    .hero::before {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      background-image: repeating-linear-gradient(
-        45deg,
-        transparent,
-        transparent 30px,
-        rgba(211, 40, 28, 0.04) 30px,
-        rgba(211, 40, 28, 0.04) 31px
-      );
+      background-image: radial-gradient(rgba(211, 40, 28, 0.1) 1px, transparent 1px);
+      background-size: 30px 30px;
       pointer-events: none;
-      z-index: 1;
-    }
-
-    /* Vija skanimi */
-    .scan-line {
-      position: absolute;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, var(--red), transparent);
-      box-shadow: 0 0 20px 4px rgba(211,40,28,0.6);
-      z-index: 2;
-      animation: scanLine 6s ease-in-out infinite;
-      pointer-events: none;
+      opacity: 0.5;
     }
 
     .hero-inner {
       display: flex;
       flex-direction: column;
-      gap: 32px;
+      gap: 40px;
       position: relative;
-      z-index: 3;
-      width: 100%;
+      z-index: 2;
     }
 
     .hero-content {
@@ -601,18 +450,16 @@
 
     .hero h1 {
       font-family: var(--font-head);
-      font-size: 2.2rem;
+      font-size: 2.4rem;
       font-weight: 800;
       line-height: 1.05;
       text-transform: uppercase;
       letter-spacing: -0.5px;
-      margin-bottom: 12px;
-      min-height: 1.1em;
-      color: #fff;
+      margin-bottom: 16px;
     }
 
     @media (min-width: 480px) {
-      .hero h1 { font-size: 2.8rem; }
+      .hero h1 { font-size: 3rem; }
     }
 
     .hero h1 em {
@@ -621,10 +468,11 @@
     }
 
     .hero p {
-      font-size: 1rem;
-      color: rgba(255,255,255,0.85);
-      margin-bottom: 24px;
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 32px;
       max-width: 480px;
+      line-height: 1.7;
     }
 
     .hero-buttons {
@@ -635,81 +483,78 @@
 
     .hero-buttons .btn {
       flex: 1 1 auto;
-      min-width: 140px;
+      min-width: 150px;
     }
 
     .hero-visual {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 16px;
       justify-content: center;
     }
 
     .price-tag {
-      background: var(--white);
-      color: var(--text);
-      border-radius: var(--radius);
-      padding: 14px 20px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-      min-width: 150px;
-      border-left: 4px solid var(--red);
-      animation: float 4s ease-in-out infinite;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #fff;
+      border-radius: 16px;
+      padding: 20px 24px;
+      min-width: 170px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      transition: transform var(--transition), border-color var(--transition);
     }
 
-    .price-tag:nth-child(2) { animation-delay: 1s; }
-    .price-tag:nth-child(3) { animation-delay: 2s; }
+    .price-tag:hover {
+      border-color: rgba(211, 40, 28, 0.5);
+      transform: translateY(-5px);
+    }
 
     .price-tag .tag-label {
       font-size: 0.7rem;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--text-muted);
-      font-weight: 600;
+      letter-spacing: 1.5px;
+      color: rgba(255,255,255,0.5);
+      font-weight: 700;
+      margin-bottom: 4px;
     }
 
     .price-tag .tag-name {
       font-family: var(--font-head);
       font-weight: 700;
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       line-height: 1.2;
+      margin-bottom: 6px;
     }
 
     .price-tag .tag-price {
       font-weight: 700;
       color: var(--red);
-      font-size: 1.15rem;
-      margin-top: 2px;
+      font-size: 1.2rem;
     }
 
     /* ---------- Section ---------- */
     .section {
-      padding: 48px 0;
-    }
-
-    @media (min-width: 768px) {
-      .section { padding: 56px 0; }
+      padding: 56px 0;
     }
 
     .section-header {
-      margin-bottom: 24px;
+      margin-bottom: 32px;
     }
 
     .section-header h2 {
       font-family: var(--font-head);
-      font-size: 1.8rem;
+      font-size: 2rem;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: -0.3px;
       line-height: 1.1;
     }
 
-    @media (min-width: 480px) {
-      .section-header h2 { font-size: 2rem; }
-    }
-
     .section-header p {
       color: var(--text-muted);
-      margin-top: 8px;
+      margin-top: 12px;
       max-width: 560px;
       font-size: 0.95rem;
     }
@@ -718,11 +563,11 @@
     .categories-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
+      gap: 12px;
     }
 
     @media (min-width: 480px) {
-      .categories-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+      .categories-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
     }
 
     @media (min-width: 1024px) {
@@ -732,20 +577,16 @@
     .category-card {
       background: var(--white);
       border-radius: var(--radius);
-      padding: 16px 12px;
+      padding: 20px 16px;
       border: 1px solid var(--grey-border);
-      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+      transition: all var(--transition);
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: 6px;
-      min-height: 100px;
+      gap: 8px;
       text-align: left;
       -webkit-tap-highlight-color: transparent;
-    }
-
-    .category-card:active {
-      transform: scale(0.97);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     }
 
     .category-card:hover {
@@ -755,26 +596,31 @@
     }
 
     .category-icon {
-      font-size: 1.5rem;
-      line-height: 1;
-      display: inline-block;
-      transition: transform 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: rgba(211, 40, 28, 0.1);
+      border-radius: 10px;
+      color: var(--red);
+      margin-bottom: 4px;
     }
 
     .category-card h3 {
       font-family: var(--font-head);
-      font-size: 0.95rem;
+      font-size: 1rem;
       font-weight: 700;
       text-transform: uppercase;
       line-height: 1.15;
     }
 
     @media (min-width: 480px) {
-      .category-card h3 { font-size: 1.05rem; }
+      .category-card h3 { font-size: 1.1rem; }
     }
 
     .category-card p {
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       color: var(--text-muted);
     }
 
@@ -782,8 +628,8 @@
     .catalog-controls {
       display: flex;
       flex-direction: column;
-      gap: 12px;
-      margin-bottom: 20px;
+      gap: 16px;
+      margin-bottom: 28px;
     }
 
     .search-wrapper {
@@ -793,13 +639,13 @@
 
     .search-wrapper input {
       width: 100%;
-      min-height: 48px;
-      padding: 12px 16px 12px 44px;
+      min-height: 52px;
+      padding: 12px 16px 12px 48px;
       border-radius: var(--radius);
       border: 2px solid var(--grey-border);
       background: var(--white);
       color: var(--text);
-      font-size: 16px;
+      font-size: 1rem;
       font-family: inherit;
       transition: border-color var(--transition), box-shadow var(--transition);
     }
@@ -807,42 +653,36 @@
     .search-wrapper input:focus {
       border-color: var(--red);
       outline: none;
-      box-shadow: 0 0 0 3px rgba(211,40,28,0.1);
+      box-shadow: 0 0 0 4px rgba(211,40,28,0.1);
     }
 
-    .search-wrapper::before {
-      content: '🔍';
+    .search-icon {
       position: absolute;
-      left: 14px;
+      left: 16px;
       top: 50%;
       transform: translateY(-50%);
-      font-size: 1rem;
+      color: var(--text-muted);
       pointer-events: none;
-      opacity: 0.5;
     }
 
     .filter-buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
+      gap: 8px;
     }
 
     .filter-btn {
-      padding: 8px 14px;
-      min-height: 40px;
+      padding: 8px 18px;
+      min-height: 42px;
       border-radius: 40px;
       border: 2px solid var(--grey-border);
       background: var(--white);
       color: var(--text);
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       font-weight: 600;
       transition: all var(--transition);
       white-space: nowrap;
       -webkit-tap-highlight-color: transparent;
-    }
-
-    .filter-btn:active {
-      transform: scale(0.95);
     }
 
     .filter-btn:hover {
@@ -861,11 +701,11 @@
     .product-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
+      gap: 12px;
     }
 
     @media (min-width: 480px) {
-      .product-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+      .product-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
     }
 
     @media (min-width: 640px) {
@@ -881,17 +721,18 @@
       border-radius: var(--radius);
       overflow: hidden;
       border: 1px solid var(--grey-border);
-      transition: transform var(--transition), box-shadow var(--transition);
+      transition: all var(--transition);
       display: flex;
       flex-direction: column;
       position: relative;
-      animation: fadeInUp 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+      animation: fadeInUp 0.5s ease forwards;
       opacity: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     }
 
     .product-card:hover {
-      transform: translateY(-6px) scale(1.01);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+      transform: translateY(-6px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
     }
 
     .product-image {
@@ -905,8 +746,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-      background: var(--grey-bg);
+      transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
     }
 
     .product-card:hover .product-image img {
@@ -915,97 +755,68 @@
 
     .badge-oferte {
       position: absolute;
-      top: 6px;
-      left: 6px;
+      top: 8px;
+      left: 8px;
       background: var(--red);
       color: #fff;
-      font-size: 0.6rem;
+      font-size: 0.65rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      padding: 4px 8px;
-      border-radius: 4px;
+      padding: 4px 10px;
+      border-radius: 6px;
       z-index: 2;
-      box-shadow: 0 2px 8px rgba(211,40,28,0.4);
-    }
-
-    @media (min-width: 480px) {
-      .badge-oferte { font-size: 0.65rem; padding: 4px 10px; }
+      box-shadow: 0 4px 10px rgba(211,40,28,0.3);
     }
 
     .product-info {
-      padding: 10px;
+      padding: 14px;
       display: flex;
       flex-direction: column;
-      gap: 3px;
+      gap: 4px;
       flex: 1;
-    }
-
-    @media (min-width: 480px) {
-      .product-info { padding: 12px; }
+      padding-bottom: 18px; /* Added padding so it looks good without a button */
     }
 
     .product-brand {
-      font-size: 0.6rem;
+      font-size: 0.7rem;
       text-transform: uppercase;
-      letter-spacing: 0.8px;
+      letter-spacing: 1px;
       font-weight: 700;
       color: var(--red);
     }
 
-    @media (min-width: 480px) {
-      .product-brand { font-size: 0.65rem; }
-    }
-
     .product-name {
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       font-weight: 600;
       line-height: 1.3;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
-      min-height: 2.1em;
-    }
-
-    @media (min-width: 480px) {
-      .product-name { font-size: 0.85rem; }
+      min-height: 2.2em;
+      color: var(--text);
     }
 
     .product-price {
       font-family: var(--font-head);
-      font-size: 1rem;
+      font-size: 1.2rem;
       font-weight: 800;
       color: var(--text);
-      margin-top: 2px;
-      transition: color var(--transition);
-    }
-
-    @media (min-width: 480px) {
-      .product-price { font-size: 1.15rem; }
+      margin-top: 4px;
+      margin-bottom: 4px;
     }
 
     .product-price .ask {
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       font-weight: 600;
       color: var(--text-muted);
       font-family: var(--font-body);
     }
 
     .product-actions {
-      padding: 0 10px 10px;
+      padding: 0 14px 14px;
       margin-top: auto;
-    }
-
-    @media (min-width: 480px) {
-      .product-actions { padding: 0 12px 12px; }
-    }
-
-    .product-actions .btn {
-      width: 100%;
-      min-height: 40px;
-      font-size: 0.8rem;
-      padding: 8px 12px;
     }
 
     .no-results {
@@ -1020,7 +831,7 @@
     .why-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 12px;
+      gap: 16px;
     }
 
     @media (min-width: 640px) {
@@ -1034,12 +845,13 @@
     .why-card {
       background: var(--white);
       border-radius: var(--radius);
-      padding: 20px 16px;
+      padding: 24px 20px;
       border-left: 4px solid var(--red);
       display: flex;
-      gap: 14px;
-      align-items: flex-start;
-      transition: transform var(--transition), box-shadow var(--transition);
+      flex-direction: column;
+      gap: 12px;
+      transition: all var(--transition);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     }
 
     .why-card:hover {
@@ -1048,32 +860,26 @@
     }
 
     .why-icon {
-      font-size: 1.5rem;
-      flex-shrink: 0;
-      width: 44px;
-      height: 44px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: var(--grey-bg);
-      border-radius: 8px;
-      transition: transform 0.3s ease;
-    }
-
-    .why-card:hover .why-icon {
-      transform: scale(1.1) rotate(5deg);
+      width: 48px;
+      height: 48px;
+      background: rgba(211, 40, 28, 0.08);
+      border-radius: 12px;
+      color: var(--red);
     }
 
     .why-card h3 {
       font-family: var(--font-head);
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       font-weight: 700;
       text-transform: uppercase;
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
 
     .why-card p {
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       color: var(--text-muted);
       line-height: 1.5;
     }
@@ -1082,7 +888,7 @@
     .contact-section {
       background: var(--black);
       color: #fff;
-      padding: 48px 0;
+      padding: 56px 0;
     }
 
     .contact-section .section-header h2 {
@@ -1090,13 +896,13 @@
     }
 
     .contact-section .section-header p {
-      color: rgba(255,255,255,0.7);
+      color: rgba(255,255,255,0.6);
     }
 
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 16px;
+      gap: 20px;
     }
 
     @media (min-width: 768px) {
@@ -1106,84 +912,94 @@
     .contact-card {
       background: var(--charcoal);
       border-radius: var(--radius);
-      padding: 20px 16px;
+      padding: 28px 24px;
       transition: transform var(--transition);
+      border: 1px solid rgba(255,255,255,0.05);
     }
 
     .contact-card:hover {
       transform: translateY(-4px);
+      border-color: rgba(211,40,28,0.3);
     }
 
     .contact-card h3 {
       font-family: var(--font-head);
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       font-weight: 700;
       text-transform: uppercase;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
       color: var(--red);
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .contact-card p,
     .contact-card a {
       font-size: 0.95rem;
-      color: rgba(255,255,255,0.85);
-      line-height: 1.7;
-    }
-
-    .contact-card a:hover {
-      color: #fff;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.8;
     }
 
     .contact-phone-big {
       font-family: var(--font-head);
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: 800;
       color: #fff !important;
       display: inline-block;
-      margin: 8px 0;
+      margin: 12px 0;
       letter-spacing: 0.5px;
-      transition: color var(--transition), transform var(--transition);
+      transition: color var(--transition);
     }
 
     .contact-phone-big:hover {
       color: var(--red) !important;
-      transform: scale(1.02);
     }
 
     .contact-buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 16px;
+      gap: 12px;
+      margin-top: 20px;
     }
 
     .contact-buttons .btn {
       flex: 1 1 auto;
-      min-width: 120px;
+      min-width: 140px;
     }
 
     .hours-badge {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      background: rgba(211,40,28,0.15);
-      color: #fff;
-      padding: 6px 14px;
+      gap: 8px;
+      padding: 8px 18px;
       border-radius: 40px;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       font-weight: 600;
-      border: 1px solid rgba(211,40,28,0.4);
-      animation: pulseRed 2s infinite;
+      transition: all var(--transition);
+    }
+
+    .hours-badge.open {
+      background: rgba(37, 211, 102, 0.15);
+      color: #25D366;
+      border: 1px solid rgba(37, 211, 102, 0.3);
+      animation: pulseGreen 2.5s infinite;
+    }
+
+    .hours-badge.closed {
+      background: rgba(211, 40, 28, 0.15);
+      color: var(--red);
+      border: 1px solid rgba(211, 40, 28, 0.3);
     }
 
     /* ---------- Footer ---------- */
     .footer {
       background: #0A0A0A;
-      color: rgba(255,255,255,0.5);
-      padding: 24px 0;
+      color: rgba(255,255,255,0.4);
+      padding: 32px 0;
       text-align: center;
-      font-size: 0.8rem;
-      border-top: 1px solid rgba(255,255,255,0.06);
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
     }
 
     .footer strong {
@@ -1194,14 +1010,14 @@
     .nav-mobile {
       display: none;
       position: fixed;
-      top: 60px;
+      top: 64px;
       left: 0;
       right: 0;
       background: var(--white);
       border-bottom: 3px solid var(--red);
-      padding: 16px;
+      padding: 20px;
       z-index: 99;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
       animation: fadeInUp 0.3s ease;
     }
 
@@ -1212,12 +1028,12 @@
     .nav-mobile a {
       display: flex;
       align-items: center;
-      min-height: 48px;
-      padding: 8px 12px;
-      font-size: 1rem;
+      min-height: 52px;
+      padding: 8px 16px;
+      font-size: 1.05rem;
       font-weight: 500;
       border-bottom: 1px solid var(--grey-border);
-      transition: color var(--transition), background var(--transition), padding-left var(--transition);
+      transition: all var(--transition);
     }
 
     .nav-mobile a:last-child {
@@ -1226,16 +1042,16 @@
 
     .nav-mobile a:hover {
       color: var(--red);
-      background: var(--grey-bg);
-      border-radius: 6px;
-      padding-left: 20px;
+      background: var(--grey-light);
+      border-radius: 8px;
+      padding-left: 24px;
     }
 
-    /* ---------- Floating WhatsApp Button (Mobile) ---------- */
+    /* ---------- Floating WhatsApp Button ---------- */
     .floating-wa {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
+      bottom: 24px;
+      right: 24px;
       width: 60px;
       height: 60px;
       background: #25D366;
@@ -1244,16 +1060,15 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.8rem;
-      box-shadow: 0 6px 20px rgba(37,211,102,0.5);
+      box-shadow: 0 8px 25px rgba(37,211,102,0.5);
       z-index: 98;
-      animation: pulseGreen 2s infinite;
+      animation: pulseGreen 2.5s infinite;
       transition: transform var(--transition);
       -webkit-tap-highlight-color: transparent;
     }
 
     .floating-wa:hover {
-      transform: scale(1.1);
+      transform: scale(1.1) rotate(5deg);
     }
 
     @media (min-width: 768px) {
@@ -1281,7 +1096,7 @@
       }
 
       .hero {
-        padding: 80px 0 90px;
+        padding: 100px 0 120px;
       }
 
       .hero-inner {
@@ -1296,6 +1111,7 @@
 
       .hero-visual {
         flex: 0 0 auto;
+        flex-direction: column;
       }
 
       .hero-buttons .btn {
@@ -1305,35 +1121,73 @@
 
     @media (min-width: 1024px) {
       .hero h1 {
-        font-size: 4rem;
+        font-size: 4.2rem;
       }
-    }
-
-    /* Mobile rregullime për Hero */
-    @media (max-width: 767px) {
-      .gear-1 { font-size: 100px; }
-      .gear-2 { font-size: 130px; }
-      .gear-3 { font-size: 70px; }
-      .hero-screw { font-size: 120px; }
-      .hero {
-        padding: 50px 0 60px;
-        min-height: 500px;
-      }
-      .spark { width: 2px; height: 2px; }
     }
   </style>
 </head>
 <body>
 
+  <!-- SVG Sprite for Icons -->
+  <svg style="display:none;" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="icon-wa" viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </symbol>
+    <symbol id="icon-ig" viewBox="0 0 24 24">
+      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+    </symbol>
+    <symbol id="icon-phone" viewBox="0 0 24 24">
+      <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+    </symbol>
+    <symbol id="icon-location" viewBox="0 0 24 24">
+      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+    </symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24">
+      <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+    </symbol>
+    <symbol id="icon-tag" viewBox="0 0 24 24">
+      <path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/>
+    </symbol>
+    <symbol id="icon-trophy" viewBox="0 0 24 24">
+      <path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/>
+    </symbol>
+    <symbol id="icon-brain" viewBox="0 0 24 24">
+      <path d="M13 3c-3.9 0-7 3.1-7 7 0 2.4 1.2 4.5 3 5.7V17h8v-1.3c1.8-1.2 3-3.3 3-5.7 0-3.9-3.1-7-7-7zm-3 9c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zm3 0c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zm3 0c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zM9 19h6v2H9z"/>
+    </symbol>
+    <symbol id="icon-tool" viewBox="0 0 24 24">
+      <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
+    </symbol>
+    <symbol id="icon-battery" viewBox="0 0 24 24">
+      <path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z"/>
+    </symbol>
+    <symbol id="icon-bolt" viewBox="0 0 24 24">
+      <path d="M11 21h-1l1-7H7.5c-.58 0-.57-.32-.38-.66.19-.34.05-.08.07-.12C8.48 10.94 10.42 7.54 13 3h1l-1 7h3.5c.49 0 .56.33.47.51l-.07.15C12.96 17.55 11 21 11 21z"/>
+    </symbol>
+    <symbol id="icon-shield" viewBox="0 0 24 24">
+      <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+    </symbol>
+    <symbol id="icon-home" viewBox="0 0 24 24">
+      <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+    </symbol>
+    <symbol id="icon-search" viewBox="0 0 24 24">
+      <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+    </symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24">
+      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+    </symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24">
+      <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+    </symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+      <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+    </symbol>
+  </svg>
+
   <!-- ======== HEADER ======== -->
   <header class="header">
     <div class="container header-inner">
       <a href="#" class="logo" aria-label="Vegla Punë Dardha - Kreu">
-        <!-- 
-          ⚠️ ZËVENDËSONI KËTË URL ME LOGON TUAJ REALE 
-          P.sh.: "https://domaini-juaj.com/logo.png"
-        -->
-        <img src="https://i.ibb.co/6P0y0y0/logo-placeholder.png" alt="Logo Vegla Punë Dardha" class="logo-img" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('afterbegin','<span style=\'width:36px;height:36px;background:var(--red);border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1rem;font-weight:800;flex-shrink:0;\'>VP</span>')">
+        <img src="https://i.ibb.co/6P0y0y0/logo-placeholder.png" alt="Logo" style="width:36px;height:36px;object-fit:contain;border-radius:8px;" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('afterbegin','<div style=\'width:36px;height:36px;background:var(--red);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:1.1rem;\'>VP</div>')">
         Vegla Punë <span>Dardha</span>
       </a>
 
@@ -1345,7 +1199,8 @@
 
       <div class="header-actions">
         <a href="tel:+355688353311" class="btn btn-primary btn-sm header-phone pulse-btn-red" aria-label="Telefono tani">
-          📞 Telefono
+          <svg class="icon" style="width:18px;height:18px;"><use href="#icon-phone"/></svg>
+          Telefono
         </a>
         <button class="menu-toggle" id="menuToggle" aria-label="Hap menunë" aria-expanded="false">
           <span></span>
@@ -1361,58 +1216,38 @@
     <a href="#produkte">Produkte</a>
     <a href="#pse-ne">Pse ne</a>
     <a href="#kontakt">Kontakt</a>
-    <a href="tel:+355688353311" style="color:var(--red); font-weight:700;">📞 068 835 3311</a>
+    <a href="tel:+355688353311" style="color:var(--red); font-weight:700; display:flex; align-items:center; gap:8px;">
+      <svg class="icon" style="width:18px;height:18px;"><use href="#icon-phone"/></svg>
+      068 835 3311
+    </a>
   </nav>
 
-  <!-- ======== HERO INDUSTRIAL ======== -->
+  <!-- ======== HERO ======== -->
   <section class="hero">
-    <!-- Rrotat e dhëmbëzuara në sfond -->
-    <div class="gear-bg" aria-hidden="true">
-      <span class="gear gear-1">⚙️</span>
-      <span class="gear gear-2">⚙️</span>
-      <span class="gear gear-3">⚙️</span>
-    </div>
-
-    <!-- Vidha qendrore që rrotullohet -->
-    <span class="hero-screw" aria-hidden="true">🔩</span>
-
-    <!-- Shkëndijat -->
-    <div class="sparks" aria-hidden="true">
-      <span class="spark"></span>
-      <span class="spark"></span>
-      <span class="spark"></span>
-      <span class="spark"></span>
-      <span class="spark"></span>
-      <span class="spark"></span>
-      <span class="spark"></span>
-    </div>
-
-    <!-- Vija e skanimit -->
-    <div class="scan-line" aria-hidden="true"></div>
-
     <div class="container hero-inner">
       <div class="hero-content animate-fade-up">
-        <h1>Vegla pune që <em class="typewriter">bëjnë punën</em>.</h1>
+        <h1>Vegla pune që <em>bëjnë punën</em>.</h1>
         <p>Marka të njohura, çmime të dukshme dhe këshillim profesional. Hapur deri në 23:30, çdo ditë.</p>
         <div class="hero-buttons">
           <a href="#produkte" class="btn btn-primary pulse-btn-red">Shiko produktet</a>
           <a href="https://wa.me/355688353311?text=P%C3%ABrsh%C3%ABndetje%2C%20kam%20nj%C3%AB%20pyetje%20p%C3%ABr%20vegla%20pune." class="btn btn-wa pulse-btn-green" target="_blank" rel="noopener">
-            💬 WhatsApp
+            <svg class="icon" style="width:20px;height:20px;"><use href="#icon-wa"/></svg>
+            WhatsApp
           </a>
         </div>
       </div>
       <div class="hero-visual" aria-hidden="true">
-        <div class="price-tag animate-fade-up delay-1">
+        <div class="price-tag float-soft animate-fade-up delay-1">
           <div class="tag-label">Ofertë</div>
           <div class="tag-name">Trapan me bateri</div>
           <div class="tag-price">9,900 lekë</div>
         </div>
-        <div class="price-tag animate-fade-up delay-2">
+        <div class="price-tag float-soft animate-fade-up delay-2" style="animation-delay: 0.3s;">
           <div class="tag-label">Më i shitur</div>
           <div class="tag-name">Kompresor ajri 100L</div>
           <div class="tag-price">35,000 lekë</div>
         </div>
-        <div class="price-tag animate-fade-up delay-3">
+        <div class="price-tag float-soft animate-fade-up delay-3" style="animation-delay: 0.6s;">
           <div class="tag-label">Siguri</div>
           <div class="tag-name">Fikëse zjarri 6kg</div>
           <div class="tag-price">2,800 lekë</div>
@@ -1430,32 +1265,32 @@
       </div>
       <div class="categories-grid">
         <a href="#produkte" class="category-card animate-fade-up delay-1" data-category="bateri">
-          <span class="category-icon">🔋</span>
+          <div class="category-icon"><svg class="icon icon-lg"><use href="#icon-battery"/></svg></div>
           <h3>Vegla me bateri</h3>
           <p>Trapan, matrapik, frezibël</p>
         </a>
         <a href="#produkte" class="category-card animate-fade-up delay-2" data-category="elektrike">
-          <span class="category-icon">⚡</span>
+          <div class="category-icon"><svg class="icon icon-lg"><use href="#icon-bolt"/></svg></div>
           <h3>Vegla elektrike</h3>
           <p>Motosharra, zmerilues, saldatricë</p>
         </a>
         <a href="#produkte" class="category-card animate-fade-up delay-3" data-category="ndertim">
-          <span class="category-icon">🏗️</span>
+          <div class="category-icon"><svg class="icon icon-lg"><use href="#icon-tool"/></svg></div>
           <h3>Ndërtim</h3>
           <p>Prerëse, shkallë, karrocë</p>
         </a>
         <a href="#produkte" class="category-card animate-fade-up delay-4" data-category="dore">
-          <span class="category-icon">🔧</span>
+          <div class="category-icon"><svg class="icon icon-lg"><use href="#icon-tool"/></svg></div>
           <h3>Vegla dore</h3>
           <p>Çekiç, çelësa, darë</p>
         </a>
         <a href="#produkte" class="category-card animate-fade-up delay-1" data-category="siguri">
-          <span class="category-icon">🦺</span>
+          <div class="category-icon"><svg class="icon icon-lg"><use href="#icon-shield"/></svg></div>
           <h3>Siguri</h3>
           <p>Fikëse zjarri, doreza, kaska</p>
         </a>
         <a href="#produkte" class="category-card animate-fade-up delay-2" data-category="hidraulike">
-          <span class="category-icon">🚿</span>
+          <div class="category-icon"><svg class="icon icon-lg"><use href="#icon-home"/></svg></div>
           <h3>Hidraulike & shtëpi</h3>
           <p>Filtra, lavazh, aksesorë</p>
         </a>
@@ -1473,8 +1308,9 @@
 
       <div class="catalog-controls animate-fade-up delay-1">
         <div class="search-wrapper">
+          <svg class="icon search-icon"><use href="#icon-search"/></svg>
           <label for="searchInput" class="sr-only">Kërko produkte</label>
-          <input type="search" id="searchInput" placeholder="Kërko produkt... (p.sh. trapan, fikëse)" autocomplete="off">
+          <input type="search" id="searchInput" placeholder="Kërko produkt... (p.sh. trapan)" autocomplete="off">
         </div>
         <div class="filter-buttons" id="filterButtons" role="group" aria-label="Filtro sipas kategorisë">
           <button class="filter-btn active" data-filter="all">Të gjitha</button>
@@ -1500,28 +1336,28 @@
       </div>
       <div class="why-grid">
         <div class="why-card animate-fade-up delay-1">
-          <div class="why-icon">🏷️</div>
+          <div class="why-icon"><svg class="icon icon-lg"><use href="#icon-tag"/></svg></div>
           <div>
             <h3>Çmime të dukshme</h3>
             <p>Nuk ka surpriza. Çdo produkt ka çmimin e shënuar qartë.</p>
           </div>
         </div>
         <div class="why-card animate-fade-up delay-2">
-          <div class="why-icon">🏆</div>
+          <div class="why-icon"><svg class="icon icon-lg"><use href="#icon-trophy"/></svg></div>
           <div>
             <h3>Marka të njohura</h3>
             <p>Ingco, Total, Emtop, Kaiser, Tolsen, MaxPuls, Wellmax.</p>
           </div>
         </div>
         <div class="why-card animate-fade-up delay-3">
-          <div class="why-icon">🕐</div>
+          <div class="why-icon"><svg class="icon icon-lg"><use href="#icon-clock"/></svg></div>
           <div>
             <h3>Hapur deri vonë</h3>
             <p>Çdo ditë deri në 23:30. Për ata që punojnë me orar të zgjatur.</p>
           </div>
         </div>
         <div class="why-card animate-fade-up delay-4">
-          <div class="why-icon">🧠</div>
+          <div class="why-icon"><svg class="icon icon-lg"><use href="#icon-brain"/></svg></div>
           <div>
             <h3>Këshillim profesional</h3>
             <p>Stafi ju ndihmon të zgjidhni veglën e duhur për punën tuaj.</p>
@@ -1540,33 +1376,39 @@
       </div>
       <div class="contact-grid">
         <div class="contact-card animate-fade-up delay-1">
-          <h3>📍 Adresa</h3>
+          <h3><svg class="icon" style="width:22px;height:22px;"><use href="#icon-location"/></svg> Adresa</h3>
           <p>Rr. Siri Kodra, Bulevardi i Ri<br>Tiranë, Shqipëri</p>
-          <p style="margin-top:12px;">
-            <a href="https://maps.google.com/?q=Rr.+Siri+Kodra,+Bulevardi+i+Ri,+Tirana" target="_blank" rel="noopener" style="color:var(--red); font-weight:600;">
-              Hap në Google Maps →
+          <p style="margin-top:16px;">
+            <a href="https://maps.google.com/?q=Rr.+Siri+Kodra,+Bulevardi+i+Ri,+Tirana" target="_blank" rel="noopener" style="color:var(--red); font-weight:600; display:inline-flex; align-items:center; gap:6px;">
+              Hap në Google Maps
+              <svg class="icon" style="width:16px;height:16px;transform:rotate(-45deg);"><use href="#icon-arrow-right"/></svg>
             </a>
           </p>
         </div>
         <div class="contact-card animate-fade-up delay-2">
-          <h3>📞 Telefon & WhatsApp</h3>
+          <h3><svg class="icon" style="width:22px;height:22px;"><use href="#icon-phone"/></svg> Telefon & WhatsApp</h3>
           <a href="tel:+355688353311" class="contact-phone-big">068 835 3311</a>
           <div class="contact-buttons">
-            <a href="tel:+355688353311" class="btn btn-primary btn-sm pulse-btn-red">Telefono</a>
-            <a href="https://wa.me/355688353311?text=P%C3%ABrsh%C3%ABndetje%2C%20kam%20nj%C3%AB%20pyetje." class="btn btn-wa btn-sm pulse-btn-green" target="_blank" rel="noopener">
-              💬 WhatsApp
+            <a href="tel:+355688353311" class="btn btn-primary btn-sm pulse-btn-red">
+              <svg class="icon" style="width:18px;height:18px;"><use href="#icon-phone"/></svg> Telefono
             </a>
-            <a href="https://instagram.com/vegla_pune_dardha" class="btn btn-outline btn-sm" target="_blank" rel="noopener" style="border-color:rgba(255,255,255,0.3); color:#fff;">
-              📸 Instagram
+            <a href="https://wa.me/355688353311?text=P%C3%ABrsh%C3%ABndetje%2C%20kam%20nj%C3%AB%20pyetje." class="btn btn-wa btn-sm pulse-btn-green" target="_blank" rel="noopener">
+              <svg class="icon" style="width:20px;height:20px;"><use href="#icon-wa"/></svg> WhatsApp
+            </a>
+            <a href="https://instagram.com/vegla_pune_dardha" class="btn btn-outline btn-sm" target="_blank" rel="noopener" style="border-color:rgba(255,255,255,0.2); color:#fff;">
+              <svg class="icon" style="width:20px;height:20px;"><use href="#icon-ig"/></svg> Instagram
             </a>
           </div>
         </div>
         <div class="contact-card animate-fade-up delay-3" style="grid-column: 1 / -1;">
-          <h3>🕐 Orari</h3>
-          <p>E Hënë – E Diel: <strong style="color:#fff;">08:00 – 23:30</strong></p>
-          <p style="margin-top:8px;">
-            <span class="hours-badge">🟢 Hapur tani</span>
-          </p>
+          <h3><svg class="icon" style="width:22px;height:22px;"><use href="#icon-clock"/></svg> Orari</h3>
+          <p>E Hënë – E Diel: <strong style="color:#fff; font-size:1.1rem;">08:00 – 23:30</strong></p>
+          <div style="margin-top:12px;">
+            <span class="hours-badge" id="hoursStatus">
+              <svg class="icon" style="width:16px;height:16px;"><use href="#icon-check"/></svg>
+              Duke kontrolluar...
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -1576,23 +1418,23 @@
   <footer class="footer">
     <div class="container">
       <p><strong>Vegla Punë Dardha</strong> — Rr. Siri Kodra, Bulevardi i Ri, Tiranë</p>
-      <p style="margin-top:4px;">© 2025 Vegla Punë Dardha. Të gjitha të drejtat e rezervuara.</p>
+      <p style="margin-top:8px;">© 2025 Vegla Punë Dardha. Të gjitha të drejtat e rezervuara.</p>
     </div>
   </footer>
 
-  <!-- Floating WhatsApp Button (shfaqet vetëm në telefon) -->
+  <!-- Floating WhatsApp Button (Mobile only) -->
   <a href="https://wa.me/355688353311?text=P%C3%ABrsh%C3%ABndetje%2C%20kam%20nj%C3%AB%20pyetje." 
      class="floating-wa" 
      target="_blank" 
      rel="noopener" 
      aria-label="Dërgo mesazh në WhatsApp">
-    💬
+    <svg class="icon" style="width:30px;height:30px;"><use href="#icon-wa"/></svg>
   </a>
 
   <!-- ======== JAVASCRIPT ======== -->
   <script>
     // =============================================
-    // 1. IMAGE URLs — ZËVENDËSONI ME FOTOT TUAJA REALE
+    // 1. IMAGE URLs
     // =============================================
     const IMAGE_URLS = {
       trapan_bateri: "https://images.unsplash.com/photo-1581147036324-c1c89c2c2c95?w=600&h=600&fit=crop",
@@ -1738,17 +1580,34 @@
       grid.innerHTML = filtered.map((p, index) => {
         const hasImg = p.img && p.img.length > 0;
         const badgeHtml = p.badge ? '<span class="badge-oferte">' + escapeHtml(p.badge) + '</span>' : '';
-        const waMessage = encodeURIComponent('Përshëndetje, kam pyetje për produktin: ' + p.name + ' (' + (p.brand || 'Pa markë') + '). Çmimi: ' + (p.price ? p.price.toLocaleString('sq-AL') + ' lekë' : 'Pyet çmimin') + '.');
-        const waLink = 'https://wa.me/355688353311?text=' + waMessage;
-        const animDelay = (index % 8) * 0.06;
+        const animDelay = (index % 8) * 0.05;
+
+        // KONTROLLI: A ka çmim produkti?
+        // Nëse NUK ka çmim (null), shfaq butonin e WhatsApp.
+        // Nëse KA çmim, mos shfaq butonin fare.
+        const hasPrice = p.price !== null && p.price !== undefined;
+        let actionHtml = '';
+
+        if (!hasPrice) {
+          const waMessage = encodeURIComponent('Përshëndetje, kam pyetje për produktin: ' + p.name + ' (' + (p.brand || 'Pa markë') + ').');
+          const waLink = 'https://wa.me/355688353311?text=' + waMessage;
+          actionHtml = `
+            <div class="product-actions">
+              <a href="${waLink}" target="_blank" rel="noopener" class="btn-wa-sm" aria-label="Pyet për ${escapeHtml(p.name)}">
+                <svg class="icon" style="width:16px;height:16px;"><use href="#icon-wa"/></svg>
+                Pyet çmimin
+              </a>
+            </div>
+          `;
+        }
 
         return `
           <article class="product-card" style="animation-delay: ${animDelay}s;">
             <div class="product-image">
               ${badgeHtml}
               ${hasImg
-                ? '<img src="' + p.img + '" alt="' + escapeHtml(p.name) + '" loading="lazy" onerror="this.style.display=\'none\';this.parentElement.insertAdjacentHTML(\'afterbegin\',\'<div class=&quot;placeholder&quot;>🔧</div>\')">'
-                : '<div class="placeholder">🔧</div>'
+                ? '<img src="' + p.img + '" alt="' + escapeHtml(p.name) + '" loading="lazy" onerror="this.style.display=\'none\';this.parentElement.insertAdjacentHTML(\'afterbegin\',\'<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;color:var(--grey-border);font-size:2.5rem;&quot;>🔧</div>\')">'
+                : '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--grey-border);font-size:2.5rem;">🔧</div>'
               }
             </div>
             <div class="product-info">
@@ -1756,9 +1615,7 @@
               <h3 class="product-name">${escapeHtml(p.name)}</h3>
               <div class="product-price">${formatPrice(p.price)}</div>
             </div>
-            <div class="product-actions">
-              <a href="${waLink}" target="_blank" rel="noopener" class="btn btn-primary btn-sm" aria-label="Pyet për ${escapeHtml(p.name)}">💬 Pyet</a>
-            </div>
+            ${actionHtml}
           </article>
         `;
       }).join('');
@@ -1819,7 +1676,38 @@
     });
 
     // =============================================
-    // 6. INIT
+    // 6. DYNAMIC OPENING HOURS STATUS
+    // =============================================
+    function updateOpeningStatus() {
+      const now = new Date();
+      const options = { timeZone: 'Europe/Tirane', hour: 'numeric', minute: 'numeric', hour12: false };
+      const formatter = new Intl.DateTimeFormat('en-US', options);
+      const parts = formatter.formatToParts(now);
+      const hour = parseInt(parts.find(p => p.type === 'hour').value, 10);
+      const minute = parseInt(parts.find(p => p.type === 'minute').value, 10);
+      
+      const currentTime = hour * 60 + minute;
+      const openTime = 8 * 60; // 08:00
+      const closeTime = 23 * 60 + 30; // 23:30
+      
+      const statusElements = document.querySelectorAll('#hoursStatus');
+      
+      statusElements.forEach(el => {
+        if (currentTime >= openTime && currentTime < closeTime) {
+          el.innerHTML = '<svg class="icon" style="width:16px;height:16px;"><use href="#icon-check"/></svg> Hapur tani';
+          el.className = 'hours-badge open';
+        } else {
+          el.innerHTML = '<svg class="icon" style="width:16px;height:16px;"><use href="#icon-clock"/></svg> Mbyllur';
+          el.className = 'hours-badge closed';
+        }
+      });
+    }
+
+    updateOpeningStatus();
+    setInterval(updateOpeningStatus, 60000);
+
+    // =============================================
+    // 7. INIT
     // =============================================
     renderProducts();
   </script>
